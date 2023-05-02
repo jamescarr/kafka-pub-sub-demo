@@ -1,0 +1,71 @@
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+dist/
+build/
+*.so
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyre
+*.pyi
+*.exe
+
+# Rust
+target/
+Cargo.lock
+*.rs.bk
+*.d
+*.rmeta
+*.lib
+*.rlib
+*.dll
+*.exe
+
+# Docker
+.dockerignore
+*.dockerfile
+docker-compose*.yml
+.docker/
+
+# Miscellaneous
+*.swp
+*.swo
+*.swn
+*.tmp
+.DS_Store
+.vscode/
+.idea/
+*.iml
+*.bak
+*.sublime*
+*.orig
+*.rej
+*.retry
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# OS generated files
+ehthumbs.db
+Thumbs.db
+
+# Directories and files created by the user
+output/
+logs/
+keys/
+certificates/

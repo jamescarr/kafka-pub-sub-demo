@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "python-producer"
+version = "0.1.0"
+description = "Python Kafka producer"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+kafka-python = "^2.0.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
