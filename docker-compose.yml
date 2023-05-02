@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    environment:
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
+      KAFKA_LISTENERS: PLAINTEXT://:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_CONFLUENT_SUPPORT_METRICS_ENABLE: 'false'
+    ports:
+      - 9092:9092
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - 2181:2181
+
+  python-producer:
+    build: python-producer
+    depends_on:
+      - kafka
+
+  rust-consumer:
+    build: rust-consumer
+    depends_on:
+      - kafka

@@ -35,9 +35,6 @@ Cargo.lock
 *.exe
 
 # Docker
-.dockerignore
-*.dockerfile
-docker-compose*.yml
 .docker/
 
 # Miscellaneous
